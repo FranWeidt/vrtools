@@ -1,6 +1,6 @@
-import 'people.dart';
-import 'projects.dart';
-import 'vrtools.dart';
+import 'people_model.dart';
+import 'projects_model.dart';
+import 'vrtools_model.dart';
 
 class VRProject {
   VRTools _vRTools;

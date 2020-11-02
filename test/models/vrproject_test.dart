@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:test/test.dart';
 import 'package:http/http.dart' as http;
 
-import 'package:vrtools/models/vrproject.dart';
+import 'package:vrtools/models/data/vrproject_model.dart';
 
 Future<http.Response> fetchVRProject() async {
   final response =
