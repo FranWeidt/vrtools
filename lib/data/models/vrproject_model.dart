@@ -1,3 +1,5 @@
+import 'package:vrtools/domain/entities/vrproject_entity.dart';
+
 import 'people_model.dart';
 import 'projects_model.dart';
 import 'vrtools_model.dart';
@@ -7,11 +9,7 @@ class VRProject {
   List<People> _people;
   List<Projects> _projects;
 
-  VRProject({VRTools vRTools, List<People> people, List<Projects> projects}) {
-    this._vRTools = vRTools;
-    this._people = people;
-    this._projects = projects;
-  }
+  VRProject(this._vRTools, this._people, this._projects);
 
   VRTools get vRTools => _vRTools;
   List<People> get people => _people;
@@ -47,4 +45,16 @@ class VRProject {
     }
     return data;
   }
+
+  factory VRProject.fromEntity(VRProjectEntity entity) => VRProject(
+        entity.vRTools,
+        entity.people,
+        entity.projects,
+      );
+
+  VRProjectEntity toEntity() => VRProjectEntity(
+        vRTools,
+        people,
+        projects,
+      );
 }
