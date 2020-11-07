@@ -25,6 +25,8 @@ class Projects {
     this._modes = modes;
   }
 
+  String get name => _name;
+
   Projects.fromJson(Map<String, dynamic> json) {
     _name = json['name'];
     _imageSrc = json['imageSrc'];
@@ -58,4 +60,14 @@ class Projects {
     }
     return data;
   }
+
+  String get imageSrc => _imageSrc;
+
+  String get description => _description;
+
+  String get threejsSrc => _threejsSrc;
+
+  List<References> get references => _references;
+
+  List<Modes> get modes => _modes;
 }
